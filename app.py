@@ -19,13 +19,5 @@ def home():
         return series.loc[year]
     except KeyError:
         return f'Invalid input ({series.index.min()} - {series.index.max()})'
-
-
-@app.route('/home/<name>',methods=['GET'])
-def home1(name):
-    # num1 = int(name)
-    # num2 = int(name1)
-    return name
-
 if __name__ == "__main__":
     app.run(debug=True)
